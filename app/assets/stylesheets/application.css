@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+form {
+  margin-bottom: 30px;
+}
+input[type=text] {
+  width: 300px;
+}
+input[type=submit] {
+  width: 150px;
+}
+
+.message {
+ background-color: #ddd;
+ padding: 20px;
+ border-radius: 10px;
+ margin-bottom: 10px;
+}

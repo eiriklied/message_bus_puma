@@ -1,0 +1,9 @@
+<h1>Start chatting</h1>
+
+<%= form_for Message.new, remote: true do |f| %>
+  <%= f.text_field :text %>
+  <%= f.submit 'Post' %>
+<% end %>
+
+
+<%= render @messages %>
