@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require message-bus
 //= require_tree .
+
+$(function() {
+  MessageBus.start();
+  MessageBus.subscribe("/messages", function(data){
+    eval(data);
+  });
+});

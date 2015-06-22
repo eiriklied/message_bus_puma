@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create!(message_params)
+    MessageBus.publish "/messages", render_to_string('prepend_message')
     render nothing: true
   end
 
